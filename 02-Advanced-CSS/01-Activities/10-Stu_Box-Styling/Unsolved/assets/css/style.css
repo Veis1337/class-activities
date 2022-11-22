@@ -12,6 +12,7 @@ body {
 }
 
 header {
+  border-radius: 20px;
   padding: 40px;
   text-align: center;
   background: #13293d;
@@ -67,6 +68,8 @@ footer {
 .card {
   border-style: solid;
   border-width: 1px;
+  border-radius: 20px 20px 0px 0px;
+  rotate: 20deg;
   padding: 10px;
   margin: 20px;
   flex: 0 0 300px;
@@ -81,6 +84,8 @@ footer {
 }
 
 .card img {
+  border-radius: 20px;
+  filter: drop-shadow(5px 5px 5px black);
   width: 100%;
 }
 
