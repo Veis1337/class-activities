@@ -68,6 +68,9 @@ footer {
   color: #fff;
 }
 
+a[href$=".css"]::after {
+  content: "📝"
+}
 /* TODO: Add code here to select all <a> elements that link to a file with a `.css` extension */
 
 @media screen and (max-width: 768px) {
