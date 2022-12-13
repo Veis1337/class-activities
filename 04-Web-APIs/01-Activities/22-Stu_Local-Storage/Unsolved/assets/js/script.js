@@ -11,8 +11,13 @@ function displayMessage(type, message) {
   msgDiv.textContent = message;
   msgDiv.setAttribute("class", type);
 }
-
 function renderLastRegistered() {
+  var userEmail = localStorage.getItem("user-email");
+  var userPassword = localStorage.getItem("user-password");
+
+  if (!userEmail || !userPassword) {
+    return;
+  }
   // TODO: Retrieve the last email and password and render it to the page
 }
 
@@ -28,7 +33,8 @@ signUpButton.addEventListener("click", function(event) {
     displayMessage("error", "Password cannot be blank");
   } else {
     displayMessage("success", "Registered successfully");
-
+    localStorage.setItem("user-email", email);
+    localStorage.setItem("user-password", password);
   // TODO: Save email and password to localStorage and render the last registered user
   }
 });
